@@ -2,18 +2,15 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom';
-import { AiOutlineEdit } from 'react-icons/ai';
-import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineAddBox } from 'react-icons/md';
-import { MdOutlineDelete } from 'react-icons/md';
 import BooksTable from '../components/home/BooksTable';
 import BooksCard from '../components/home/BooksCard';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import MyWallpaper from "../components/images/Wallpaper6.jpeg";
-
-
+import { AiOutlineEdit } from 'react-icons/ai';
+import { BsInfoCircle } from 'react-icons/bs';
+import { MdOutlineDelete } from 'react-icons/md';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -36,14 +33,9 @@ const Home = () => {
 
   return (
     <div className='mt-28'>
-      <div className='shadow-md w-full sticky top-0 z-20'>
-        <Header />
-      </div>
-      <div className="container mx-auto px-12 py-4">
-        <span>
-          <img src={MyWallpaper} alt="My Wallpaper" className="bg-cover w-full h-full left-0 top-0 -z-10 absolute" />
-        </span>
-        <div className='grid grid-cols-12 relative'>
+      <Header />
+      <div className="container bg-[url('./images/Wallpaper6.jpeg')] bg-center mx-auto px-12 py-4">
+        <div className='grid grid-cols-12'>
           <div className='col-span-1 left-5 z-10 '>
             <Navbar />
           </div>
@@ -79,6 +71,7 @@ const Home = () => {
             )}
           </div>
         </div>
+        <div className='h-screen'></div>
       </div>
       <Footer />
     </div>

@@ -10,7 +10,7 @@ const Header = () => {
     ];
     let [open, setOpen] = useState(false);
     return (
-        <div className='shadow-md w-full fixed top-0 left-0'>
+        <div className='shadow-md w-full py-2.5 fixed top-0 left-0 z-20'>
             <span>
                 <img src={MyWallpaper} alt="My Wallpaper" className="w-full h-full left-0 top-0 -z-10 absolute" />
             </span>

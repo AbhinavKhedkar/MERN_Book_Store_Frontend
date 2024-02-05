@@ -14,10 +14,10 @@ const Navbar = () => {
     ];
     return (
         <div className='absolute'>
-            <ul className='border-2 border-black bg-yellow-100 rounded-full fixed left-10 top-28 p-4 space-y-6'>
+            <ul className='border-2 border-black bg-yellow-100 rounded-full fixed left-10 p-4 space-y-6'>
                 <li>
                     <a href='/'>
-                        <img src={myLogo} alt="My Logo" className="w-full h-auto" />
+                        <img src={myLogo} alt="My Logo" />
                     </a>
                 </li>
                 {LinksTo.map((link) => (

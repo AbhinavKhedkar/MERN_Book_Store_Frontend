@@ -5,8 +5,8 @@ import DeleteBook from './pages/DeleteBook';
 import EditBook from './pages/EditBook';
 import CreateBook from './pages/CreateBook';
 import ShowBook from './pages/ShowBook';
-import Login from './components/Login';
-import SignUp from './components/SignUp';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 const App = () => {
   return (

@@ -10,14 +10,14 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
 const Login = () => {
-    const [userName, setUserName] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const { enqueueSnackbar } = useSnackbar();
 
     const handleLogin = () => {
           const data = {
-            userName,
+            email,
             password,
           };
           setLoading(true);
@@ -37,7 +37,7 @@ const Login = () => {
 
     return (
         <div className='p-4 mt-28 relative'>
-            <div className='shadow-md w-full sticky top-0 relative z-20'>
+            <div className='shadow-md w-full sticky top-0 z-20'>
                 <Header />
             </div>
             <div className='relative z-10'>
@@ -45,14 +45,15 @@ const Login = () => {
             </div>
             <BackButton />
             <h1 className='text-3xl my-4'>LOGIN</h1>
-            {loading ? <Spinner /> : ''}
+            {/* {loading ? <Spinner /> : ''} */}
             <div className='flex flex-col bg-gray-100 border-2 border-indigo-400 rounded-xl p-4 mx-auto max-w-md'>
                 <div className='my-4'>
-                    <label className='text-lg mr-4 text-gray-700'>USER NAME</label>
+                    <label className='text-lg mr-4 text-gray-700'>EMAIL</label>
                     <input
                         type='text'
-                        value={userName}
-                        onChange={(e) => setUserName(e.target.value)}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder='Enter Your Email Id'
                         className='border-2 border-gray-500 px-4 py-2 w-full focus:outline-none focus:border-blue-500'
                     />
                 </div>
@@ -62,6 +63,7 @@ const Login = () => {
                         type='text'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        placeholder='Enter Your Password'
                         className='border-2 border-gray-500 px-4 py-2 w-full focus:outline-none focus:border-blue-500'
                     />
                 </div>

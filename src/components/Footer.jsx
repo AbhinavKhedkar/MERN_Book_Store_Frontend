@@ -4,9 +4,9 @@ import MyWallpaper from './images/Wallpaper1.jpg';
 
 const Footer = () => {
     return (
-        <footer className='footer border border-t-[#33353F] border-l-transparent border-r-transparent text-white'>
+        <footer className='footer border border-t-[#33353F] border-l-transparent border-r-transparent text-white bottom-0'>
             <span>
-                <img src={MyWallpaper} alt="My Wallpaper" className="absolute" />
+                {/* <img src={MyWallpaper} alt="My Wallpaper" className="absolute" /> */}
             </span>
             <div className='container p-12 left-0 flex justify-between relative'>
                 <span className='text-3xl text-amber-700 mr-1 pt-2'>
